@@ -1,10 +1,22 @@
 import Head from 'next/head'
-import Navbar from '../components/Navbar'
+import Header from 'components/Header'
+import Navbar from 'components/navbar'
+import  Feed from 'components/Feed'
+import { colors } from 'style/theme'
 export default function Home() {
   return (
-    <div>
+    <>
+      <Header />
+      <section>
+        <Feed />
+      </section>
       <Navbar />
-      <h1>Hola Home</h1>
-    </div>
+      <style jsx > { `
+        section {
+          flex: 1;
+          }
+            ` }
+      </style> 
+    </>
   )
 }

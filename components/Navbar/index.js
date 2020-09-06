@@ -1,57 +1,62 @@
-import { colors } from "../../style/theme";
+import React from 'react'
+import { colors } from 'style/theme'
+import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import HomeIcon from '@material-ui/icons/Home';
+import SearchIcon from '@material-ui/icons/Search';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import Link from 'next/link'
-import MenuIcon from '@material-ui/icons/Menu';
 export default function Navbar() {
     return (
         <>
-            <header>
-                <section>
-                     <div className="logo">
-                    <h3>WEBCOMIC</h3>
-                </div>
-                <div className="menu">
-                    <MenuIcon />
-                    <nav className="menu-movil">
-                        <Link href="/">
-                            <a>Home</a>
-                        </Link>
-                    </nav>
-                </div>
-               </section>
-           </header>
-            <style jsx >{`
-                header{
+        <nav>
+            <li>
+                <Link href="/">
+                 <FavoriteIcon/>
+                </Link>
+            </li>
+            <li>
+                <Link href="/">
+                <HomeIcon/>
+                </Link>
+            </li>
+            <li>
+                <Link href="/#">
+                <SearchIcon/>
+                </Link>
+            </li>
+            <li>
+                <Link href="/#">
+                <AccountCircleIcon/>
+                </Link>
+            </li>
+        </nav>
+         <style jsx > { `
+                nav{
                     padding: 0;
                     margin:0;
+                    height:60px;
                     background: ${colors.dark};
-                    color: ${colors.gray}
+                    bottom: 0; 
+                    display: flex;
+                    position: fixed;
+                    width: 100%;
+                    list-style: none;
+                    border-radius: 20px 20px 0 0;
+                    box-shadow: 1px -2px 5px black;
                     }
-                section{
-                    height: 70px;
-                    width:80%;
-                    margin: 0 auto;
+                li{
+                    color: ${colors.gray};
                     display: flex;
-                    justify-content: space-between;
-                    align-items:center;
-                }
-                .logo, .menu{
+                    flex: 1 1 auto;
                     height: 100%;
-                    padding: 0 10px;
-                    display: flex;
-                    align-items:center;
-                    cursor:pointer;
+                    align-items: center;
+                    justify-content: center;
+                    
                 }
-                .logo:hover, .menu:hover{
-                    background: ${colors.gray}44;
-                    padding: 0 10px;
+                li:hover{
+                    background: ${colors.primary};                    
                 }
-                h3{
-                    margin:0;
-                }
-                .menu-movil{
-                    display: none !important;
-                }
-            `}</style>
+            ` } </style>   
         </>
     )
 }

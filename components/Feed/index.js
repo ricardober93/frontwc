@@ -1,9 +1,12 @@
-import React from 'react'
+import Category from 'components/Category/Index'
+import Reciently from 'components/Reciently'
+import React, { Fragment } from 'react'
 
 export default function Feed() {
     return (
-        <div>
-            <h1>feed</h1>
-        </div>
+        <Fragment>
+            <Category />
+            <Reciently /> 
+        </Fragment>
     )
 }

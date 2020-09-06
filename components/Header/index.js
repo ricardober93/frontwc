@@ -15,6 +15,7 @@ export default function Header() {
                 header{
                     padding: 0;
                     margin:0;
+                    margin-bottom:18px;
                     }
                 section{
                     height: 70px;

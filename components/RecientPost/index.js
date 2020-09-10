@@ -1,7 +1,7 @@
 import React from 'react'
 import { colors } from 'style/theme'
 
-export default function Reciently() {
+export default function RecientPost() {
     return (
         <div className="reciently"> 
             <h3>RECIENTES</h3>
@@ -45,6 +45,7 @@ export default function Reciently() {
                 overflow-x: scroll;
                 scroll-padding: 0 50%;
                 scroll-snap-type: x mandatory;
+                scroll-behavior: smooth;
             }
             .card{
                 height: 200px;

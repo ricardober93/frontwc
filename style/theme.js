@@ -16,7 +16,8 @@ gradient_green: "linear-gradient(to bottom, #40df9f, #40dc9d, #3fda9b, #3fd79a, 
 
 export const globalStyle = css.global ` 
     html,
-    body{
+    body,
+    #__next{
         padding:0;
         margin:0;
         font-family: ${fonts.base};

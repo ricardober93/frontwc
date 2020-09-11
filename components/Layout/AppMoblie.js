@@ -1,9 +1,12 @@
-import React from 'react'
-
-export default function AppMoblie() {
+export default function AppMoblie({ children }) {
     return (
-        <div>
-            
-        </div>
+        <main>
+            { children}
+            <style jsx> {`
+            main {
+                margin-left: 2em;
+                }
+            `} </style>
+        </main>
     )
 }

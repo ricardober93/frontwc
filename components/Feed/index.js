@@ -1,12 +1,15 @@
 import Category from 'components/Category/Index'
-import Reciently from 'components/Reciently'
-import React, { Fragment } from 'react'
+import AppMoblie from 'components/Layout/AppMoblie'
+import RecientPost from 'components/RecientPost'
+import PopularPost from 'components/PopularPost'
+import React from 'react'
 
 export default function Feed() {
     return (
-        <Fragment>
+        <AppMoblie>
             <Category />
-            <Reciently /> 
-        </Fragment>
+            <RecientPost />
+            <PopularPost />
+        </AppMoblie>
     )
 }

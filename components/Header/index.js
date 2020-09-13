@@ -1,6 +1,8 @@
-
+import useUser from 'hook/useUser'
 import Brand from "../../icons/Brand";
 export default function Header() {
+    const user = useUser();
+    console.log(user)
     return (
         <>
             {/* headers */}
@@ -8,7 +10,10 @@ export default function Header() {
                 <section>
                      <div className="logo">
                      <Brand />
-                </div>
+                    </div>
+                    {
+                        user ? user.username : null
+                    }
                </section>
            </header>
             <style jsx >{`

@@ -1,16 +1,25 @@
+import React, { useEffect } from 'react'
 import ButtonLogin from 'components/ButtonLogin'
 import Brand from 'icons/Brand'
 import { useRouter } from 'next/router'
-import React from 'react'
+import { loginWithGoogle } from 'firebase/client'
+
+import useUser, { USER_STATES } from "hook/useUser";
 
 export default function login() {
+    const user = useUser()
     const router = useRouter();
 
-    const handleClick = (e) => {
-    e.preventDefault()
-    router.push('/')
+    const handleClick = () => {
+        loginWithGoogle().catch((err) => {
+            console.log(err)
+        })  
     }
-    
+
+    useEffect(() => {
+        user && router.replace("/")
+    }, [user])
+    console.log(user)
     return (
         <>
             <section className="login">
@@ -22,10 +31,23 @@ export default function login() {
                     <p>Continua para iniciar sesión</p>
                 </div>
                 <div className="login_button">
-                    <ButtonLogin
-                        text="Entrar con Google"
-                        handleClick={handleClick}
-                    />
+                {
+                    user == USER_STATES.NOT_LOGGED && (
+                            <ButtonLogin
+                                text="Entrar con Google"
+                                handleClick={handleClick}
+                            />
+                            )}
+                    {user == USER_STATES.NOT_KNOWN && (
+                        <div className="sk-chase">
+                            <div className="sk-chase-dot"></div>
+                            <div className="sk-chase-dot"></div>
+                            <div className="sk-chase-dot"></div>
+                            <div className="sk-chase-dot"></div>
+                            <div className="sk-chase-dot"></div>
+                            <div className="sk-chase-dot"></div>
+                        </div>
+                    ) }
                 </div>
             </section>
             <style jsx > { `

@@ -4,8 +4,10 @@ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import HomeIcon from '@material-ui/icons/Home';
 import SearchIcon from '@material-ui/icons/Search';
 import FavoriteIcon from '@material-ui/icons/Favorite';
+import useUser from 'hook/useUser'
 import Link from 'next/link'
 export default function Navbar() {
+    const user = useUser();
     return (
         <>
         <nav>
@@ -26,7 +28,11 @@ export default function Navbar() {
             </li>
             <li>
                 <Link href="/#">
-                <AccountCircleIcon/>
+                    {
+                        user ? (
+                            <img className="avatar" src={user.avatar} />
+                        ) : <AccountCircleIcon />
+                    }                
                 </Link>
             </li>
         </nav>
@@ -55,6 +61,11 @@ export default function Navbar() {
                 }
                 li:hover{
                     background: ${colors.primary};                    
+                }
+                .avatar{
+                    height:24px;
+                    width:24px;
+                    border-radius:999px;
                 }
             ` } </style>   
         </>

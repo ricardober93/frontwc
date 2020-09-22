@@ -11,9 +11,6 @@ export default function Header() {
                      <div className="logo">
                      <Brand />
                     </div>
-                    {
-                        user ? user.username : null
-                    }
                </section>
            </header>
             <style jsx >{`

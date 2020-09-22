@@ -3,7 +3,10 @@ import Header from 'components/Header'
 import Navbar from 'components/Navbar'
 import  Feed from 'components/Feed'
 import { colors } from 'style/theme'
+
 export default function Home() {
+
+
   return (
     <>
       <Header />

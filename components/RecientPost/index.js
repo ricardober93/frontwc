@@ -1,35 +1,53 @@
 import React from 'react'
 import { colors } from 'style/theme'
-
+import Link from 'next/link'
 export default function RecientPost() {
     return (
         <div className="reciently"> 
             <h3>RECIENTES</h3>
             <div className="scroll-card">
-            <div className="card">
-                <img src="https://firebasestorage.googleapis.com/v0/b/webcomic-49a88.appspot.com/o/image1.jpg?alt=media&token=91ebc28c-099f-47f4-b57f-dacd4151a9d4" alt="" />
-                <h4>WHEN YOU WAKE UP</h4>
-            </div>
-             <div className="card">
-                <img src="https://firebasestorage.googleapis.com/v0/b/webcomic-49a88.appspot.com/o/image2.jpg?alt=media&token=d16e9564-f4fc-45a3-a821-d1533032e42e" alt="" />
-                <h4>WHEN YOU WAKE UP</h4>
-            </div>
-             <div className="card">
-                <img src="https://firebasestorage.googleapis.com/v0/b/webcomic-49a88.appspot.com/o/image1.jpg?alt=media&token=91ebc28c-099f-47f4-b57f-dacd4151a9d4" alt="" />
-                <h4>WHEN YOU WAKE UP</h4>
-            </div>
-             <div className="card">
-                <img src="https://firebasestorage.googleapis.com/v0/b/webcomic-49a88.appspot.com/o/image2.jpg?alt=media&token=d16e9564-f4fc-45a3-a821-d1533032e42e" alt="" />
-                <h4>WHEN YOU WAKE UP</h4>
-            </div>
-             <div className="card">
-                <img src="https://firebasestorage.googleapis.com/v0/b/webcomic-49a88.appspot.com/o/image1.jpg?alt=media&token=91ebc28c-099f-47f4-b57f-dacd4151a9d4" alt="" />
-                <h4>WHEN YOU WAKE UP</h4>
-            </div>
-             <div className="card">
-                <img src="https://firebasestorage.googleapis.com/v0/b/webcomic-49a88.appspot.com/o/image2.jpg?alt=media&token=d16e9564-f4fc-45a3-a821-d1533032e42e" alt="" />
-                <h4>WHEN YOU WAKE UP</h4>
-            </div>
+            <Link href="/comic">
+                <div className="card">
+                     <img src="https://firebasestorage.googleapis.com/v0/b/webcomic-49a88.appspot.com/o/image1.jpg?alt=media&token=91ebc28c-099f-47f4-b57f-dacd4151a9d4" alt="" />
+                    <h4>WHEN YOU WAKE UP</h4>   
+                </div>
+                </Link>
+            <Link href="/comic">
+                <div className="card">
+                     <img src="https://firebasestorage.googleapis.com/v0/b/webcomic-49a88.appspot.com/o/image2.jpg?alt=media&token=d16e9564-f4fc-45a3-a821-d1533032e42e" alt="" />
+                    <h4>WHEN YOU WAKE UP</h4>   
+                </div>
+                </Link>
+            <Link href="/comic">
+                <div className="card">
+                     <img src="https://firebasestorage.googleapis.com/v0/b/webcomic-49a88.appspot.com/o/image1.jpg?alt=media&token=91ebc28c-099f-47f4-b57f-dacd4151a9d4" alt="" />
+                    <h4>WHEN YOU WAKE UP</h4>   
+                </div>
+                </Link>
+            <Link href="/comic">
+                <div className="card">
+                     <img src="https://firebasestorage.googleapis.com/v0/b/webcomic-49a88.appspot.com/o/image2.jpg?alt=media&token=d16e9564-f4fc-45a3-a821-d1533032e42e" alt="" />
+                    <h4>WHEN YOU WAKE UP</h4>   
+                </div>
+                </Link>
+            <Link href="/comic">
+                <div className="card">
+                     <img src="https://firebasestorage.googleapis.com/v0/b/webcomic-49a88.appspot.com/o/image1.jpg?alt=media&token=91ebc28c-099f-47f4-b57f-dacd4151a9d4" alt="" />
+                    <h4>WHEN YOU WAKE UP</h4>   
+                </div>
+                </Link>
+            <Link href="/comic">
+                <div className="card">
+                     <img src="https://firebasestorage.googleapis.com/v0/b/webcomic-49a88.appspot.com/o/image2.jpg?alt=media&token=d16e9564-f4fc-45a3-a821-d1533032e42e" alt="" />
+                    <h4>WHEN YOU WAKE UP</h4>   
+                </div>
+            </Link>    
+            <Link href="/comic">
+                <div className="card">
+                     <img src="https://firebasestorage.googleapis.com/v0/b/webcomic-49a88.appspot.com/o/image1.jpg?alt=media&token=91ebc28c-099f-47f4-b57f-dacd4151a9d4" alt="" />
+                    <h4>WHEN YOU WAKE UP</h4>   
+                </div>
+            </Link>
             </div>
            
             <style jsx >{`

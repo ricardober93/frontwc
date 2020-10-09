@@ -74,11 +74,12 @@ export default function PopularPost() {
             }
             img{
                 height: 200px;
-                width: 300px;
+                width: 100%;
                 background-size: cover;
                 background-position: center;
                 border-radius: 25px;
                 position: absolute;
+                object-fit: cover;
                 
             }
             h4{

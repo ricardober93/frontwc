@@ -43,3 +43,20 @@ export const onAuthChanged = (onChange) => {
         onChange(normalizeUser)
     })
 }
+
+
+export const getAllCategories = () => {
+  return db
+    .collection("categorias")
+    .get()
+    .then(({ docs }) => {
+      return docs.map((doc) => {
+        const data = doc.data()
+        const id = doc.id
+        return {
+          ...data,
+          id,
+        }
+      })
+    })
+}

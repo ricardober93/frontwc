@@ -1,28 +1,24 @@
-import React, {Fragment} from 'react'
+import { getAllCategories } from 'firebase/client';
+import React, {Fragment, useEffect, useState} from 'react'
 import { colors } from 'style/theme';
 
 export default function Category() {
+
+    const [timeline, setTimeline] = useState([])
+     useEffect(() => {
+       getAllCategories().then(setTimeline)
+    }, [])
+    
     return (
         <Fragment>
             <article>
-                <div className="categoria">
-                    All
-                </div>
-                <div className="categoria">
-                    Shonnen
-                </div>
-                <div className="categoria">
-                    Aventure
-                </div>
-                <div className="categoria">
-                    All
-                </div>
-                <div className="categoria">
-                    Shonnen
-                </div>
-                <div className="categoria">
-                    Aventure
-                </div>
+    
+                {
+                    timeline.map(({ nombre, id }) => (
+                         <div className="categoria" key={id}>
+                                {nombre}
+                            </div>  
+             ))}
             </article>
             <style jsx > {`
                 article{
